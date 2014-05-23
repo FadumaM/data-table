@@ -20,10 +20,9 @@ Within approximately two hours we would expect:
 
 Additionally, by spending another 2 hours on it you could:
 
-* Make the table sortable
-* Add a dropdown select element above the table to make the data filterable
+* Make the table sortable by clicking on column headers
 
 Please note:
 
 * Just get it working on Chrome in your development computer.
-* If you want to really blow us away then add a visualisation below the table that renders the data into some kind of chart.
+* Optionally, if you want to really blow us away then add a visualisation below the table that renders the data into some kind of chart.
