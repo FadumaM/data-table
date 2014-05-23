@@ -24,5 +24,5 @@ Additionally, by spending another 2 hours on it you could:
 
 Please note:
 
-* Just get it working on Chrome in your development computer.
+* Don't worry about making it work on different screen sizes, resolutions or different browsers.  Just get it working in your browser of choice.
 * Optionally, if you want to really blow us away then add a visualisation below the table that renders the data into some kind of chart.
