@@ -1,4 +1,4 @@
-data-table-developer-assesment
+data-table-developer-assessment
 ==============================
 
 This test is designed to demostrate your front end development skills.  You should be prepared to spend at least two hours on it.
