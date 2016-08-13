@@ -14,8 +14,6 @@ tableViz = function(elm, data) {
     });
   }
 
-
-
   function addDataOverallTable() {
     $.map(data, function(month, index) {
       $.each(month, function(channel, figure) {
@@ -30,6 +28,39 @@ tableViz = function(elm, data) {
       });
     });
 
+  }
+
+  function sortTable(turn, length) {
+    var $rows = $('.view_count_table tbody  tr').get();
+    var index = this.cellIndex;
+    $rows.sort(function(a, b) {
+      var A = getVal(a);
+      var B = getVal(b);
+
+      if (A < B) {
+        return -1 * turn;
+      }
+
+      if (A > B) {
+        return 1 * turn;
+      }
+
+      return 0;
+
+    });
+
+    function getVal(sortVariable) {
+      var cell = $(sortVariable).children('td').eq(length).text().toUpperCase();
+      if ($.isNumeric(cell)) {
+        cell = parseInt(cell, 10);
+      }
+
+      return cell;
+    }
+
+    $.each($rows, function(index, row) {
+      $('.view_count_table').children('tbody').append(row);
+    });
   }
 
 };
