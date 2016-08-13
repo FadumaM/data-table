@@ -186,4 +186,23 @@ tableViz = function(elm, data) {
     });
   }
 
+  function getChannelDetails(name, page) {
+    var monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+      'September', 'October', 'November', 'December'
+    ];
+    var channelData = [];
+    var cells = $(name).find('td');
+    $.each(cells, function(index, value) {
+      channelData.push(parseInt($(value).text()));
+      return channelData;
+    });
+    showChanneDetails(channelData, monthsNames, page);
+  }
+
+  function showChanneDetails(channelData, monthsNames, page) {
+    console.log(channelData);
+    console.log(monthsNames);
+    console.log(page);
+  }
+
 };
