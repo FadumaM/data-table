@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>View Count</title>
 <link href="main.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -126,85 +127,180 @@ tableViz($ ,{
 </script>
 <header class="view_count_header">
   <nav class="view_count_navbar">
-    <h1 class="view_count_title">View Count</h1>
+  <div class="view_count_title site_title">
+    <img class="site_icon" src="/images/bbc-blocks-dark.png">
+    <h1 >View Count</h1>
+  </div>
     <ul class="view_count_navigation">
-      <li><a id="view-count-home" href="#" alt="Home">Home</a></li>
-      <li><a id="view-count-bbcone" href="#" alt="BBC ONE">BBC ONE</a></li>
-      <li><a id="view-count-bbctwo" href="#" alt="BBC TWO">BBC TWO</a></li>
-      <li><a id="view-count-bbcthree" href="#" alt="BBC THREE">BBC THREE</a></li>
-      <li><a id="view-count-bbcfour" href="#" alt="BBC FOUR">BBC FOUR</a></li>
-      <li><a id="view-count-bbcnews" href="#" alt="BBC NEWS">BBC NEWS</a></li>
-      <li><a id="view-count-cbbc" href="#" alt="CBBC">CBBC</a></li>
-      <li><a id="view-count-cbeebies" href="#" alt="CBEEBIES">CBEEBIES</a></li>
+      <li><a id="view-count-home" href="#home" alt="Home">Home</a></li>
+      <li><a id="view-count-bbcone" href="#bbcone" alt="BBC ONE">BBC ONE</a></li>
+      <li><a id="view-count-bbctwo" href="#bbctwo" alt="BBC TWO">BBC TWO</a></li>
+      <li><a id="view-count-bbcthree" href="#bbcthree" alt="BBC THREE">BBC THREE</a></li>
+      <li><a id="view-count-bbcfour" href="#bbcfour" alt="BBC FOUR">BBC FOUR</a></li>
+      <li><a id="view-count-bbcnews" href="#bbcnews24" alt="BBC NEWS">BBC NEWS</a></li>
+      <li><a id="view-count-cbbc" href="#cbbc" alt="CBBC">CBBC</a></li>
+      <li><a id="view-count-cbeebies" href="#cbeebies" alt="CBEEBIES">CBEEBIES</a></li>
     </ul>
   </nav>
 </header>
-<main class="view_count_body">
-  <section class="view_count_overall">
-    <table class="view_count_table">
-      <thead class= "view_count_table_header">
-        <tr>
-          <td></td>
-          <th scope="col">January</th>
-          <th scope="col">Febuary</th>
-          <th scope="col">March</th>
-          <th scope="col">April</th>
-          <th scope="col">May</th>
-          <th scope="col">June</th>
-          <th scope="col">July</th>
-          <th scope="col">August</th>
-          <th scope="col">September</th>
-          <th scope="col">October</th>
-          <th scope="col">November</th>
-          <th scope="col">December</th>
-        </tr>
-      </thead>
-      <tbody class="view_count_table_body">
-        <tr id="bbcnews24">
-          <th scope="row">BBC News 24</th>
-        </tr>
-        <tr id="bbcone">
-          <th scope="row">BBC One</th>
-        </tr>
-        <tr id="bbcfour">
-          <th scope="row">BBC Four</th>
-        </tr>
-        <tr id="bbcthree">
-          <th scope="row">BBC Three</th>
-        </tr>
-        <tr id="bbctwo">
-          <th scope="row">BBC Two</th>
-        </tr>
-        <tr id="cbbc">
-          <th scope="row">CBBC</th>
-        </tr>
-        <tr id="cbeebies">
-          <th scope="row">CBEEBIES</th>
-        </tr>
-    </tbody>
-  </table>
-  </section>
-  <section class="view_count_bbcone">
-    <h1>BBCONE</h1>
-  </section>
-  <section class="view_count_bbctwo">
-    <h1>BBCTWO</h1>
-  </section>
-  <section class="view_count_bbcthree">
-    <h1>BBCTHREE</h1>
-  </section>
-  <section class="view_count_bbcfour">
-    <h1>BBCFOUR</h1>
-  </section>
-  <section class="view_count_bbcnews">
-    <h1>BBCNEWS</h1>
-  </section>
-  <section class="view_count_cbbc">
-    <h1>CBBC</h1>
-  </section>
-  <section class="view_count_cbeebies">
-    <h1>CBEEBIES</h1>
-  </section>
-</main>
+  <main class="view_count_body">
+
+    <section class="view_count_overall">
+      <table class="view_count_table overall-table">
+        <caption class="table_caption">Overall Views results</caption>
+        <thead class= "view_count_table overall_header">
+          <tr class= "table-header-row" >
+            <td class="table_arrow">
+              <img class="pulse" id="right_arrow" src="/images/play-button.svg">
+            </td>
+            <th scope="col">January</th>
+            <th scope="col">Febuary</th>
+            <th scope="col">March</th>
+            <th scope="col">April</th>
+            <th scope="col">May</th>
+            <th scope="col">June</th>
+            <th scope="col">July</th>
+            <th scope="col">August</th>
+            <th scope="col">September</th>
+            <th scope="col">October</th>
+            <th scope="col">November</th>
+            <th scope="col">December</th>
+          </tr>
+        </thead>
+        <tbody class="table_body">
+          <tr class="bbcnews24">
+            <th scope="row">BBC News 24</th>
+          </tr>
+          <tr class="bbcone">
+            <th scope="row">BBC One</th>
+          </tr>
+          <tr class="bbcfour">
+            <th scope="row">BBC Four</th>
+          </tr>
+          <tr class="bbcthree">
+            <th scope="row">BBC Three</th>
+          </tr>
+          <tr class="bbctwo">
+            <th scope="row">BBC Two</th>
+          </tr>
+          <tr class="cbbc">
+            <th scope="row">CBBC</th>
+          </tr>
+          <tr class="cbeebies">
+            <th scope="row">CBEEBIES</th>
+          </tr>
+      </tbody>
+    </table>
+    </section>
+
+    <section class="view_count_channels" id="bbcone">
+    <div class= "view_count_title site_subheading">
+        <h1>BBC ONE</h1>
+    </div>
+      <table class="channels_graphs">
+        <caption class="graph_caption">Monthly Results</caption>
+        <thead class="graph__header">
+          <tr class="graph_header_row">
+            <th class="graph_views">Number of views</th>
+          </tr>
+        </thead>
+        <tbody class="graph_body"></tbody>
+      </table>
+    </section>
+
+    <section class="view_count_channels" id="bbctwo">
+      <div class= "view_count_title site_subheading">
+      <h1>BBC TWO</h1>
+      </div>
+      <table class="channels_graphs">
+        <caption class="graph_caption">Monthly Results</caption>
+        <thead class="graph_header">
+          <tr class="graph_header_row">
+            <th class="graph_views">Number of views</th>
+          </tr>
+        </thead>
+        <tbody class="graph_body"></tbody>
+      </table>
+    </section>
+
+    <section class="view_count_channels" id="bbcthree">
+    <div class=" view_count_title site_subheading">
+      <h1>BBC THREE</h1>
+    </div>
+      <table class="channels_graphs">
+        <caption class="graph_caption">Monthly Results</caption>
+        <thead class="graph_header">
+          <tr class="graph_header_row">
+            <th class="graph_views">Number of views</th>
+          </tr>
+        </thead>
+        <tbody class="graph_body"></tbody>
+      </table>
+    </section>
+
+    <section class="view_count_channels" id="bbcfour">
+      <div class= "view_count_title site_subheading">
+        <h1>BBC FOUR</h1>
+      </div>
+      <table class="channels_graphs">
+        <caption class="graph_caption">Monthly Results</caption>
+        <thead class="graph_header">
+          <tr class="graph_header_row">
+            <th class="graph_views">Number of views</th>
+          </tr>
+        </thead>
+        <tbody class="graph_body"></tbody>
+      </table>
+    </section>
+
+    <section class="view_count_channels" id="bbcnews24">
+    <div class= "view_count_title site_subheading">
+      <h1>BBC NEWS</h1>
+    </div>
+      <table class="channels_graphs">
+        <caption class="graph_caption">Monthly Results</caption>
+        <thead class="graph_header">
+          <tr class="graph_header_row">
+            <th class="graph_views">Number of views</th>
+          </tr>
+        </thead>
+        <tbody class="graph_body"></tbody>
+      </table>
+    </section>
+
+    <section class="view_count_channels" id="cbbc">
+      <div class= "view_count_title site_subheading">
+        <h1>CBBC</h1>
+      </div>
+      <table class="channels_graphs">
+        <caption class="graph_caption">Monthly Results</caption>
+        <thead class="graph_header">
+          <tr class="graph_header_row">
+            <th class="graph_views">Number of views</th>
+          </tr>
+        </thead>
+        <tbody class="graph_body"></tbody>
+      </table>
+    </section>
+
+    <section class="view_count_channels" id="cbeebies">
+      <div class= "view_count_title site_subheading">
+        <h1>CBEEBIES</h1>
+      </div>
+      <table class="channels_graphs">
+        <caption class="graph_caption">Monthly Results</caption>
+        <thead class="graph_header">
+          <tr class="graph_header_row">
+            <th class="graph_views">Number of views</th>
+          </tr>
+        </thead>
+        <tbody class="graph_body"></tbody>
+      </table>
+    </section>
+
+  </main>
+  <footer class="view_count_footer">
+    Made with <span id="footer_heart" class="pulse"> &hearts; </span> by Faduma.
+  </footer>
 </body>
 </html>
