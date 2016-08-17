@@ -9,7 +9,7 @@ body{
 
 section{
   width: 100vw;
-  height: 52vw;
+  height: 58vw;
 }
 
 section.view_count_overall{
@@ -24,7 +24,7 @@ section.view_count_overall{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 92px;
   letter-spacing: 2px;
 }
 
@@ -253,7 +253,7 @@ table.view_count_table.overall-table tbody tr:hover {
 }
 
 .channels_graphs thead th {
-  width: 7.5em;
+  width: 5em;
   height: auto;
   padding: 0.5em 1em;
 }

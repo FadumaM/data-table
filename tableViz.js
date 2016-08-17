@@ -1,30 +1,38 @@
 tableViz = function(elm, data) {
   $(document).ready(function() {
-
-    var header = $('.overall_header');
-
-    addDataOverallTable();
-    bindEventListener(header);
-    getTableDetails();
+    // var data = {};
+    // $.getJSON('data.json', function(json) {
+    //   var data = json;
+    //   start(data);
+    // });
+    start();
   });
 
-  function bindEventListener(header) {
+  function start() {
+    var header = $('.overall_header');
+    addDataOverallTable();
+    initiateSortTable(header);
+    getTableDetails();
+  }
 
+  function initiateSortTable(header) {
     var turn = 1;
-
     header.on('click', function() {
-      var arrow = $('#right_arrow');
-      var activeArrowSrc = "/images/play-button-active.svg";
-      arrow.removeClass("pulse");
-      arrow.removeAttr('src');
-      arrow.attr('src', activeArrowSrc);
+      changeArrow();
       turn *= -1;
       var length = $(this).prevAll().length;
       sortTable(turn, length);
     });
-
   }
 
+
+  function changeArrow() {
+    var arrow = $('#right_arrow');
+    var activeArrowSrc = "/images/play-button-active.svg";
+    arrow.removeClass("pulse");
+    arrow.removeAttr('src');
+    arrow.attr('src', activeArrowSrc);
+  }
 
   function addDataOverallTable() {
     $.map(data, function(month, index) {
@@ -86,7 +94,6 @@ tableViz = function(elm, data) {
   }
 
   function appendDetails(sections, channelNames) {
-
     $.map(channelNames, function(channelName, index) {
       $.each(sections, function(index, section) {
         var channelSection = $(this).attr('id');
@@ -101,10 +108,9 @@ tableViz = function(elm, data) {
                 5) + 'px;"><p>' + month[channelName] + '</p></td></tr>');
           }
         });
-
       });
     });
-
   }
+
 
 };
