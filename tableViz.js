@@ -12,7 +12,7 @@ tableViz = function(elm, data) {
     var header = $('.overall_header');
     addDataOverallTable();
     initiateSortTable(header);
-    getTableDetails();
+    getGraphDetails();
   }
 
   function initiateSortTable(header) {
@@ -70,7 +70,7 @@ tableViz = function(elm, data) {
     });
 
     function getVal(sortVariable) {
-      var cell = $(sortVariable).children('td').eq(length).text().toUpperCase();
+      var cell = $(sortVariable).children('td').eq(length).text();
       if ($.isNumeric(cell)) {
         cell = parseInt(cell, 10);
       }
@@ -83,7 +83,7 @@ tableViz = function(elm, data) {
     });
   }
 
-  function getTableDetails() {
+  function getGraphDetails() {
     var channelNames = [];
     var sections = $('.view_count_channels');
     $.each(sections, function() {
