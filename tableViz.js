@@ -1,10 +1,7 @@
-tableViz = function(elm, data) {
-  $(document).ready(function() {
-    // var data = {};
-    // $.getJSON('data.json', function(json) {
-    //   var data = json;
-    //   start(data);
-    // });
+$(document).ready(function() {
+  var data = {};
+  $.getJSON('data.json', function(json) {
+    data = json;
     start();
   });
 
@@ -16,9 +13,9 @@ tableViz = function(elm, data) {
   }
 
   function initiateSortTable(header) {
-    var turn = 1;
     header.on('click', function() {
       changeArrow();
+      var turn = 1;
       turn *= -1;
       var length = $(this).prevAll().length;
       sortTable(turn, length);
@@ -70,7 +67,7 @@ tableViz = function(elm, data) {
     });
 
     function getVal(sortVariable) {
-      var cell = $(sortVariable).children('td').eq(length).text();
+      var cell = $(sortVariable).children('td').eq(length).text().toUpperCase();
       if ($.isNumeric(cell)) {
         cell = parseInt(cell, 10);
       }
@@ -112,5 +109,4 @@ tableViz = function(elm, data) {
     });
   }
 
-
-};
+});
